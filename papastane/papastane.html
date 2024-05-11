@@ -29,7 +29,7 @@
       <a class="link" style="margin-left: 0;" href="papastane.html">HOME</a>
       <a class="link" id="menuLink" href="#">MENU</a>
       <a class="link" id="aboutlink" href="#">ABOUT</a>
-      <a class="link" href="#">CONTACT US</a>
+      <a class="link" id="contactlink" href="#" onclick="loadContactPage()">CONTACT US</a>
       <a class="link" id="cafeLink" href="#" onclick="scrollToMap()">CAFE</a>
     </div>
 
@@ -141,6 +141,44 @@ document.getElementById('aboutlink').addEventListener('click', function(event) {
     // Belirlediğiniz hedefe doğru kaydırma işlemi yapın
     scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+  //contact us
+document.getElementById("contactlink").addEventListener("click", function(event) {
+      event.preventDefault(); // Bağlantının varsayılan davranışını engelle
+
+      var carousel = document.getElementById("carouselExampleAutoplaying");
+      var sus = document.getElementById("sus");
+      // var container = document.getElementsByClassName("conteiner-sm d-flex justify-content-between");
+      carousel.innerHTML = '<iframe src="papacontanct.html" width="800px" height="720px" style="border:20px double #FFE6E6;"></iframe>';
+      sus.innerHTML = "";
+      for (var i = 0; i < container.length; i++) {
+        container[i].innerHTML = "";
+      }
+    });
+    document.getElementById('contactlink').addEventListener('click', function(event) {
+    // Sayfanın kaydırma işlemini durdurun
+    event.preventDefault();
+
+    // Kaydırma işlemi için bir scroll hedefi belirleyin (örneğin, belirli bir div)
+    var scrollTarget = document.getElementById('linkkutusu');
+    
+    // Belirlediğiniz hedefe doğru kaydırma işlemi yapın
+    scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+    // menu kaydırma
+    document.getElementById('menuLink').addEventListener('click', function(event) {
+    // Sayfanın kaydırma işlemini durdurun
+    event.preventDefault();
+
+    // Kaydırma işlemi için bir scroll hedefi belirleyin (örneğin, belirli bir div)
+    var scrollTarget = document.getElementById('linkkutusu');
+    
+    // Belirlediğiniz hedefe doğru kaydırma işlemi yapın
+    scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+
 
 // harita
 document.getElementById("cafeLink").addEventListener("click", function(event) {
